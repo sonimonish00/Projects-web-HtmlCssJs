@@ -1,0 +1,90 @@
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+header{
+	background-color: #666;
+	text-align: center;
+	padding: 10px;
+	font-size: 20px;
+	color: white;
+}
+footer{
+	background-color: #777;
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+
+.main-container {
+	background-color: #ccc;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap; /*	remove wrap if feels*/
+	justify-content: center;
+	align-items: flex-start;
+	align-content: space-between;
+}
+.box-1{
+	background-color: pink;
+	text-align: center;
+	border: 5px solid #00BCD4;
+    padding: 40px;
+	flex-basis: 23%;
+	margin: 10px;
+}
+.box-2{
+	background-color: green;
+	text-align: justify;
+	border: 5px solid #00BCD4;
+    padding: 40px;
+	flex-basis: 23%;
+	margin: 10px;
+}
+.box-3{
+	background-color: orange;
+	text-align: justify;
+	border: 5px solid #00BCD4;
+    padding: 40px;
+	flex-basis: 23%;
+	margin: 10px;
+}
+.box-4{
+	background-color: white;
+	text-align: justify;
+	border: 5px solid #00BCD4;
+    padding: 40px;
+	flex-basis: 23%;
+	margin: 10px;
+}
+
+/*For Responsivness*/
+@media only screen and (min-width: 762px) {
+	.box-1, .box-2, .box-3, .box-4{
+		flex-basis: 300px;
+	}
+}
+
+#stopwatch {
+  background: #eee;
+  border: 1px solid #999;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 250px;
+}
+#sw-time {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+#sw-rst, #sw-go {
+  width: 45%;
+  box-sizing: padding-box;
+  padding: 8px;
+  display: inline-block;
+  background: #aa2f2f;
+  border: 0;
+  color: #fff;
+}

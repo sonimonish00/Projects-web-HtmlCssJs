@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mini Project 1 : Time</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<link rel="stylesheet" href="clock-style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="clock-action.js"></script>
+</head>
+
+<body> <!-- You could use onload="startime()" here for Digital Clock as well -->
+	<header>Welcome to Mini Project 1 : Time</header>
+	
+	<section class="main-container">
+		<div>
+			<div class="box-1" >
+				<span><b>Digital Clock</b></span>
+				<p id="digiclock" >Digital Clock Should be Here</p>
+				<script type="text/javascript">startime();</script>
+			</div>
+			<div class="box-2">
+				<span><b>Static Countdown Timer (Jan 1, 2021 07:00:00)</b></span>
+				<div>
+					<p id="countdown">Countdown Timer should be here</p>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="box-3">
+				<span><b>Stopwatch</b></span>
+				<div id="stopwatch">
+					<p id="sw-time" class="">00:00:00</p>
+					<input type="button" value="Reset" id="sw-rst" disabled/>
+					<input type="button" value="Start" id="sw-go" disabled/>
+				</div>
+			</div>
+			<div class="box-4">
+				<p><b>Analog Clock</b></p>
+				<canvas id="canvas" width="150" height="150" style="background-color:#333"></canvas>
+				<script type="text/javascript">
+					var canvas = document.getElementById("canvas");
+					var ctx = canvas.getContext("2d");
+					var radius = canvas.height / 2;
+					ctx.translate(radius, radius);
+					radius = radius * 0.90
+					setInterval(drawClock, 1000);
+				</script>
+			</div>	
+		</div>
+	</section>
+
+	<footer>Made with <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" clip-rule="evenodd"/></svg> in India</footer>
+	
+							<!-- JS Scripts CDN -->
+  	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script> -->
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
