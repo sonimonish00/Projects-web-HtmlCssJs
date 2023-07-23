@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2 - Task 5</title>
+  </head>
+  <body>
+    <script>
+      let arr_a = [0, 1, 2, 3];
+      let arr_b = [3, 4, 5];
+      var setA = new Set(arr_a);
+      var setB = new Set(arr_b);
+
+      // UNION
+      function union(arr_a, setB) {
+        const unionset = new Set(arr_a);
+        for (const elem of setB) {
+          unionset.add(elem);
+        }
+        return unionset;
+      }
+      let arr = [...union(setA, setB)];
+      console.log("Union of Set A & B", arr);
+
+      // INTERSECTION
+      function intersection(setA, setB) {
+        const intersectionset = new Set();
+        for (const elem of setB) {
+          if (setA.has(elem)) {
+            intersectionset.add(elem);
+          }
+        }
+        return intersectionset;
+      }
+      let arr1 = intersection(setA, setB);
+      console.log("Intersection of Set A & B", arr1);
+
+      // Difference : A-B
+      function difference(setA, setB) {
+        const _difference = new Set(setA);
+        for (const elem of setB) {
+          _difference.delete(elem);
+        }
+        return _difference;
+      }
+      let arr2 = difference(setA, setB);
+      console.log("Difference of Set A & B : A-B ", arr2);
+
+      // Difference : B-A
+      let arr3 = difference(setB, setA);
+      console.log("Difference of Set A & B : B-A ", arr3);
+      
+    </script>
+  </body>
+</html>

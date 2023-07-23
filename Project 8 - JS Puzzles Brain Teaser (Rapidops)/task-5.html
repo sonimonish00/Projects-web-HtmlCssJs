@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex3 - Task 5</title>
+  </head>
+  <body>
+    <script>
+      // Static Array of Objects input
+      const static_input = [
+          { Name: "Ravindra", Sports: ["Chess", "Cricket"] },
+          { Name: "Ravi", Sports: ["Cricket", "Football"] },
+          { Name: "Rishabh", Sports: ["Table-Tennis", "Football"] }
+        ]
+
+      // SportsCollection & SportCollectionArr are for ultimately getting arrya of Strings : [chess,TT,etc.]
+      let SportsCollection = [];
+      let SportsCollectionArr = [];
+      static_input.forEach(obj => {SportsCollection.push(obj.Sports);})
+      SportsCollection = new Set(SportsCollection.flat());
+      SportsCollection.forEach(x => SportsCollectionArr.push(x)); 
+
+      // Iterating again over object, and matches with our sportsarr and store the coresponding names.
+      let personObj = {};
+      static_input.forEach(obj => {
+        obj.Sports.forEach(sport => {
+          // Using Nullish operator to create an empty array if sport array name doesnt exist, else leave.
+          // if(!personObj[sport]) personObj[sport] = [];
+          personObj[sport] ??= [];
+          if(SportsCollectionArr.includes(sport)){
+            personObj[sport].push(obj.Name);
+          }
+        });
+      })
+      console.log(personObj);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex1-Task5</title>
+  </head>
+  <body>
+    <script>
+      let userInputRows = +prompt("Please Enter No. of rows ?");
+      let character = "";
+
+      for (let i = 1; i <= userInputRows; i++) {
+        for (let k = 1; k < i; k++) {
+          character += " ";
+        }
+        for (let j = i; j <= userInputRows; j++) {
+          character += j + " ";
+        }
+        character += "\n";
+      }
+
+      for (let i = userInputRows - 1; i >= 1; i--) {
+        for (let k = 1; k < i; k++) {
+          character += " ";
+        }
+        for (let j = i; j <= userInputRows; j++) {
+          character += j + " ";
+        }
+        character += "\n";
+      }
+      console.log(character);
+    </script>
+  </body>
+</html>

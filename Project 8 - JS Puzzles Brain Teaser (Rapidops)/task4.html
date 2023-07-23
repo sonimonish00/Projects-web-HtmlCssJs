@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex1-Task4</title>
+  </head>
+  <body>
+    <script>
+      let userInputRows = +prompt("Please Enter No. of rows ?");
+      let character = "";
+
+      if (userInputRows % 2 != 0) {
+        for (let i = 1; i <= userInputRows; i++) {
+          for (let j = 1; j <= i; j++) {
+            character += "* ";
+          }
+          character += "\n";
+        }
+        for (let i = 1; i <= userInputRows - 1; i++) {
+          for (let j = 1; j <= userInputRows - i; j++) {
+            character += "* ";
+          }
+          character += "\n";
+        }
+      } else {
+        alert("Please enter Odd No.");
+      }
+
+      console.log(character);
+    </script>
+  </body>
+</html>

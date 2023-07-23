@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2 - Task 1</title>
+</head>
+<body>
+    <p>static_array = [0,1,2,3,4,5,6,7,8,9]</p>
+    <p id="answer"></p>
+    <script>
+        static_array = [0,1,2,3,4,5,6,7,8,9]
+        let userInput = +prompt("Please Enter a Parameter 'n' ?");
+        if(userInput <= 0){
+            alert("Enter value greater than 0")
+        }
+        getfirstandlast3(userInput)
+        function getfirstandlast3(userInput) {
+            let first = static_array.slice(0,userInput)
+            let second = static_array.slice(-userInput)
+            return document.getElementById('answer').innerHTML = `<b>First ${userInput} Elements are : </b>`+first + `<b>  || last ${userInput} elements are : </b>`+ second 
+        }
+    </script>
+</body>
+</html>

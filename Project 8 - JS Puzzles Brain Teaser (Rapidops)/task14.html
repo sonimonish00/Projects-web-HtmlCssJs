@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2 - Task 14</title>
+  </head>
+  <body>
+    <script>
+      let random = [
+        {
+          id: 1,
+          name: "A",
+          age: 1,
+        },
+        {
+          id: 2,
+          name: "B",
+          age: 2,
+        },
+        {
+          id: 3,
+          name: "C",
+          age: 3,
+        },
+        {
+          id: 4,
+          name: "D",
+          age: 4,
+        },
+        {
+          id: 5,
+          name: "E",
+          age: 5,
+        },
+        {
+          id: 6,
+          name: "F",
+          age: 6,
+        },
+        {
+          id: 7,
+          name: "G",
+          age: 7,
+        },
+        {
+          id: 8,
+          name: "H",
+          age: 8,
+        },
+        {
+          id: 9,
+          name: "I",
+          age: 9,
+        },
+        {
+          id: 10,
+          name: "J",
+          age: 10,
+        },
+      ];
+      // For Sorting Agewise (Ascending order : 1,2,..10)
+      console.log(random.sort((a,b) => {
+        if(a.age<b.age){
+          return -1;
+        }
+        if(a.age>b.age){
+          return 1;
+        }
+        // both char. are equal so return 0
+        return 0; 
+      }))
+      // For Sorting Namewise (Descending : J,I,...A). For Descending we interchanged return value.
+      console.log(random.sort((a,b) => {
+        if(a.name<b.name){
+          return 1;
+        }
+        if(a.name>b.name){
+          return -1;
+        }
+        // both char. are equal so return 0
+        return 0; 
+      }))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2 - Task 15</title>
+  </head>
+  <body>
+    <script>
+      let static_array = [
+        { name: "Jack", age: 23 },
+        { name: "Sam", age: 12 },
+        { name: "Max", age: 20 },
+      ];
+      let userinput = prompt("Enter delete OR insert ?");
+      if (userinput == "insert") {
+        let insertposition = +prompt("Enter position for insert ?");
+        if (insertposition > static_array.length) {
+          alert("Invalid Position");
+        } else {
+          let insertname = prompt("Enter name for insert ?");
+          let insertage = prompt("Enter age for insert ?");
+          let insertObj = {
+            name: insertname,
+            age: insertage,
+          };
+          static_array.splice(insertposition, 0, insertObj);
+          console.log(static_array);
+        }
+      } else if (userinput == "delete") {
+        let deleteposition = +prompt("Enter position for delete ?");
+        if (deleteposition > static_array.length && deleteposition < 0) {
+          alert("Invalid Position");
+        } else {
+          static_array.splice(deleteposition, 1);
+          console.log(static_array);
+        }
+      } else {
+        alert("Enter either delete or insert");
+      }
+    </script>
+  </body>
+</html>

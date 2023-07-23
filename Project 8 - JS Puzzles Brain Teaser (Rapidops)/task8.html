@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2 - Task 8</title>
+  </head>
+  <body>
+    <script>
+      const ms_day = 1000 * 60 * 60 * 24;
+      let start_date = new Date(2018, 7, 1);
+      let end_date = new Date(2020, 5, 3);
+      
+      let diffTime = end_date.getTime() - start_date.getTime();
+      // daycount = 672 days => 672 - 365.25  = 306.75
+      let dayCount = diffTime / ms_day;
+      
+      // 365.25 => 0.25 bcz of leap year & Math.floor returns the highest value
+      let years = Math.floor(dayCount/365.25);
+      let days = Math.ceil(dayCount/365.25);
+      
+      // Calculating remaining days for calculation of month
+      let remainingDaysForMonths=Math.floor(dayCount-(years*365.25));
+      let months=Math.floor((remainingDaysForMonths/365.25)*12);
+
+      console.log(years+"years, "+months +"months, " +days+"days");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2 - Task 6</title>
+  </head>
+
+  <body>
+    <script>
+      let static_array = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+      ];
+
+      function num_string_range(start, stop, range) {
+        // Final Answer array to store values
+        let ans = [];
+        // Checking for the proper input format of function
+        if (range === 0 || (typeof start == "undefined" || typeof stop == "undefined") || typeof start != typeof stop)
+        {
+          return false;
+        }
+        // For number input if start value is greater than stop value, then range/step would be in negative direction Eg. 0,-5,1 then it will be 0,-1,-2,-3,-4,-5
+        if (stop < start) {
+          range = -range;
+        }
+        // Checking for number input 
+        if (typeof start == "number") {
+          // Ternary checking if range is +ve means value of stop is greater than start.ie. 0,25,5, else vice versa
+          while (range > 0 ? stop >= start : stop <= start) {
+            // push the value of start into array & append the numeric value to start
+            ans.push(start);
+            start += range;
+          }
+        } 
+        // else checking for string input
+        else if (typeof start == "string") {
+          if (start.length != 1 || stop.length != 1) {
+            alert("Strings with one character are supported.")
+          }
+
+          // Getting numeric ASCII/UTF-16 value(between 0 and 65535) of start and stop character using charCodeAt
+          start = start.charCodeAt(0);
+          stop = stop.charCodeAt(0);
+
+          while (range > 0 ? stop >= start : stop <= start) {
+            // pushing by converting back to string into answer array using fromcharcode method
+            // basically string or number, ultimately in the end all is number, hence incrementing number.
+            ans.push(String.fromCharCode(start));
+            start += range;
+          }
+        } 
+        else {
+          alert("Only string & Number are allowed");
+        }
+        return ans;
+      }
+      console.log(num_string_range("a", "z", 2));
+    </script>
+  </body>
+</html>

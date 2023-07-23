@@ -1,0 +1,30 @@
+.date-time{
+    margin: 200px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.time{
+    background-color: lightgray;
+    border: 2px solid;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+.date {
+    background-color: lightgray;
+    border: 2px solid;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+.stopwatch-timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    margin : 50px 0 50px 0;
+}
+.timerbuttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

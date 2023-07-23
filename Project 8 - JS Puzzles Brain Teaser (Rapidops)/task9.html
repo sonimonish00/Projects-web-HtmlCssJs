@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2 - Task 9</title>
+  </head>
+  <body>
+    <script>
+      // input is in seconds
+      let input = 1607518718;
+      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      const dayNames = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+      // Timestamp is in second, multiply by 1000 to have it in millisecond (ms)
+      // Date will be from jan 1 1970.
+      let date = new Date(input * 1000);
+      let hours = date.getHours();
+      let minutes = "0" + date.getMinutes();
+      let seconds = "0" + date.getSeconds();
+      let time = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
+      let finaloutput = dayNames[date.getDay()-1] + ", "+ date.getDate() + '/' + monthNames[date.getMonth()] + '/' + date.getFullYear();
+      console.log(finaloutput, time);
+    </script>
+  </body>
+</html>

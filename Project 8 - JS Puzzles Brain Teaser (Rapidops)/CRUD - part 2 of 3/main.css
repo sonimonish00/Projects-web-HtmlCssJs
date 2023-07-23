@@ -1,0 +1,64 @@
+/* General body CSS */
+body {
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* CSS of First Div of First/Last Name & Add Button */
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.flex-container input {
+    vertical-align: middle;
+    margin: 20px 10px;
+    padding: 7px;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.btn-add {
+    padding: 3px;
+    margin-left: 10px;
+    background-color: white;
+    border-color: rgb(93, 111, 226);
+    border: 2px solid rgb(93, 111, 226);
+    color: rgb(93, 111, 226);
+}
+
+/* <-----Render Table CSS-----> */
+
+table {
+    margin-top: 40px;
+    border-collapse: separate;
+    border-spacing: 25px 10px;
+}
+
+/* Cells OR Columns */
+td {
+    padding: 5px;
+    text-align: justify;
+    background-color: lightgray;
+    width: 25%;
+}
+
+td:nth-child(3) {
+    background-color: white;
+}
+
+td:nth-child(4) {
+    background-color: white;
+}
+
+/* Render Data Button */
+.btn-render{
+    padding: 3px;
+    margin-left: 10px;
+    background-color: white;
+    border-color: rgb(93, 111, 226);
+    border: 2px solid rgb(93, 111, 226);
+    color: rgb(93, 111, 226);
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2 - Task 12</title>
+  </head>
+  <body>
+    <script>
+      let input_length = 2;
+      let input_string = "RapidOpsSolution";
+      const chunk_size = (input_string.length/input_length);
+      const parts = Array(chunk_size);
+      let start = 0;
+      for(let i=0;i<chunk_size;i++){
+        parts[i] = input_string.substr(start,input_length);
+        start += input_length;
+      }
+      console.log(parts.join(", "))
+    </script>
+  </body>
+</html>
