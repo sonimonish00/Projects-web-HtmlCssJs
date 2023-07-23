@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Info's -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons & Title -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="./images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">  
+    <title>Todo List : Todo's Simplified </title>
+    
+    <!-- Google Material Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Custom CSS with Normalize.css -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <header>
+        <span class="material-icons">receipt_long</span>
+        <span>Todo list app</span>
+        <br>
+        Today's date : <span id='date-time'></span>
+    </header>
+    <div class="flex-container">
+        <div class="flex-items">
+            <label for="tlist">Enter your task below : </label><br>
+            <input type="text" placeholder="Buy 2 Fruits" id="task" autocomplete="off"/>
+            <span id="add" onclick="addtask()" class="material-icons btn-add">add_circle</span>
+        </div>
+        
+        <div class="flex-items">
+            <ul class="js-todo-list"></ul>
+            <button id="reset" onclick="resetask()" class="btn btn-clear">Clear All</button>
+        </div>
+    </div>
+    <footer>
+        &copy; Monish Soni | Made with ❤ in India. 
+    </footer>
+    
+    <!-- Javascript/Jquery Loading -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

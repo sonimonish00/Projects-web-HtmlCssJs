@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page {
+  width: 900px;
+  margin: 0 auto;
+}
+.container {
+  overflow: hidden;  /* clearfixing float of parent element */
+  background-color: #78a6d4;
+}
+.menu {
+  height: 100px;
+  background-color: #f09ce2;    
+}
+
+.sidebar {
+  float: left;
+  width: 200px;
+  height: 300px;
+  background-color: #eff16b;   
+}
+
+.content {
+  float: left;
+  padding: 20px;
+  width: 650px; 
+  height: 500px;
+  background-color: #F5CF8E;    
+}
+.article-image {
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+p {
+  margin-bottom: 20px;
+}
+.footer {
+  overflow: hidden; /* Adjusting height */
+  background-color: #68f168;   
+}
+.column {
+  float: left;
+  width: 31%;
+  margin: 20px 1.15%;
+  height: 160px;
+  background-color: #304864;   
+}
+.avatar img {
+  float: left;
+  width: 90px;
+  height: 90px;
+  margin: 25px;
+  border-radius: 40px;
+  background-color: #D6E9FE;
+}
+.username {
+  margin-top: 10px;
+}
+
+.comment {
+  margin: 10px;
+  overflow: hidden;  /* Clearing the float via last child element */
+}
+

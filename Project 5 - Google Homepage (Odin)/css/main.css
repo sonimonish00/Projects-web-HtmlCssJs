@@ -1,0 +1,185 @@
+/* CSS Body Reset */
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    margin : 2px;
+    padding : 2px; 
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    font-family: arial, sans-serif;
+}
+
+/* General Rule for All Anchor tag */
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Top-Right Navbar CSS */
+#navlink {
+    float : right;
+    font-size: small;
+    vertical-align: middle;
+
+}
+
+#navlink a {
+    color: rgba(0,0,0,0.87);
+}
+
+#navlink img {
+  height: 24px;
+  width: 24px;
+  padding: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#navlink > a:nth-child(4) {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+#navlink > a:nth-child(4) > img {
+    background-size: 32px 32px;
+    border: 0;
+    border-radius : 50%;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    height: 32px;
+    width: 32px;
+    z-index: 0;
+}
+
+#navlink > a:nth-child(4) > img:hover {
+    border : 2px solid #D3D3D3;
+}
+#googlelogo {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+#googlelogo img {
+    display: block;
+    margin: 0 auto;
+}
+.search {
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    height: 44px;
+    margin: 0 auto;
+    max-width: 584px;
+    width: 50%;
+}
+.searchbox {
+    flex: 1;
+    display: flex;
+    padding: 5px 8px 0 16px;
+    padding-left: 5px;
+}
+.searchicon {
+    display: flex;
+    color: #9aa0a6;
+    align-items: center;
+    margin-top: -5px;
+}
+.textbox {
+    display: flex;
+    flex: 100%;
+    margin-top: -5px;
+    height: 35px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+}
+.audiomic {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-direction: row;
+    margin : 0;
+    padding-left : 1px;
+    cursor :pointer;
+}
+
+.searchbutton {
+    height: 70px;
+    padding-top: 18px;
+    top: 53px;
+    z-index: 0;
+    text-align: center;
+}
+
+.gs{
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+#lang {
+    font-size: small;
+    margin-bottom: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+#lang a {
+    padding: 0 3px;
+}
+
+.info{
+    background: #f2f2f2;
+    margin : 0;
+    padding : 0;
+    bottom:0;
+    position:absolute;
+    left:0;
+    width:100%;
+}
+.Indiatext{
+    padding: 15px 30px;
+    margin : 0;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: rgba(0,0,0,.54);
+}
+.genstyle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.genstyle a {
+    color: #70757a;
+    display: block;
+    padding: 5px;
+    white-space: nowrap;
+    font-size: 15px;
+}
+.bottominfo{
+    padding: 0 20px;
+}
