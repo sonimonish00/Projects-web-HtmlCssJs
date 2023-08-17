@@ -1,0 +1,1 @@
+It includes 3rd party (Non-CDN) plugins, libraries like jquery, bootstrap, etc.

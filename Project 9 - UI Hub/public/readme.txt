@@ -1,0 +1,1 @@
+It includes assets like css and js files, images, videos, other data etc. 
