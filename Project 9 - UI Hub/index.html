@@ -1,3 +1,4 @@
+<!-- Boilerplate/Template code | Code snippets/generators -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="./public/styles/css/app.css">
 
     <!-- Favicons -->
-    <link rel="icon" sizes="32x32" href="./public/assets/favicon.ico" />
+    <link rel="icon" sizes="32x32" href="./public/assets/icons/favicon.ico" />
 
     <!-- CSS CDN (Vendor/3rd Party) : Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -21,9 +22,33 @@
 <body>
     <!-- Begin of Sections -->
 
-    <!-- 1. Header/Navbar section (site identity/nav) : logo, navbar-menu, etc. -->
+    <!-- 1. Header/Navbar section (site identity/nav) : logo, navbar/burger-menu, etc. -->
+    <nav>
+        <h1>Welcome to UI Hub</h1>
+        <ul class="navigation">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+    </nav>
 
     <!-- 2. Hero/jumbotron/coverPic Section : includes prominent title or image -->
+    <section class="hero" id="about">
+        <img src="public/assets/images/CRUD-X.jpg" alt="jane-doe" loading="lazy" class="hero-img" />
+        <div class="bio animate__animated animate__shakeX">
+            <h2 class="bio-title">About Me</h2>
+            <p class="bio-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
+                dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
+                inventore tempore minus nemo, iste ullam illo laboriosam maiores
+                repudiandae quos!
+            </p>
+        </div>
+    </section>
 
     <!-- 3. Main Section : contains all below sections till footer -->
 
@@ -48,6 +73,13 @@
     <!-- Scroll to top -->
 
     <!-- 4. Footer section -->
+    <footer>
+        <p class="copy">&copy; Copyright 2023</p>
+        <p class="copy">
+            Built with &#x2661; by
+            <a href="https://twitter.com/MonishSoni95" target="_blank">Monish</a>
+        </p>
+    </footer>
 
     <!-- End of Sections -->
 

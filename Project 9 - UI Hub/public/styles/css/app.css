@@ -1,0 +1,241 @@
+/* CSS Coding guides for large proj. : OOCSS, BEM, SMACSS, ITCSS, ACSS, AMCSS, FUN */
+/* Build Systems (pre/post-processor) for small proj. : Sass/Scss/partial, cssnano */
+/* OOCSS : Seperation by Content & Container | Structure & Design */
+/* SMACSS : Seperaion by base, layout, module, state, theme rule */
+/* See this : https://css-tricks.com/methods-organize-css/ */
+
+/* Import section */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* #region || Var/Preset/Normalize (for advance level import css) */
+
+/* root : Psuedo-selector for declaring global custom prop. (var.) */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+/* Universal Selector : Applies CSS styles to each html element*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Html defaults : affects entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* body defaults : affects documents main content area */
+body {
+  font-family: var(--font-family);
+}
+/* #endregion || Var/Preset/Normalize */
+
+/* #region || Styles - Tag/Elements (General/1st level) */
+nav {
+  /* display/layout rules */
+  display: flex;
+
+  /* positioning rules */
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  /* box-model rules - content, background, height */
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+
+  /* Typography & Media rules - fonts, icons, images */
+  align-items: center;
+  justify-content: space-between;
+
+  /* Manipulation - Animation, transition, transformation (could sep into fun) */
+
+  /* Misc - like border radius, shadow etc. */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+}
+
+ul {
+  /* OR you could make this into sep. class "nobullets" & put it into `Utilities` region */
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+/* #endregion || Styles - Tag/Elements (General/1st level) */
+
+/* #region || Styles - Tag/Elements (Nth level) */
+nav h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+/* #endregion || Styles - Tag/Elements */
+
+/* #region || Styles (SiteWide) - Customized Class/id throughout site */
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}
+.hero img {
+  height: 34rem;
+  width: 34rem;
+}
+
+.bio {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+
+/* #endregion || Styles (SiteWide) - Customized Class/id throughout site */
+
+/* #region || Styles (Utilities) - Customized Classes for multiple elements */
+.no-bullets {
+  list-style-type: none;
+}
+/* #endregion || Styles (Utilities) - Customized Classes for multiple elements */
+
+/* #region || Styles (Context) -  Customized Classes for context/page/components */
+/* You could have different stylesheet for this & link it here via @import */
+/* See this - http://web.simmons.edu/~grabiner/comm244/weekfour/css-concepts.html */
+.product-listing {
+  /*..... */
+}
+/* #endregion || Styles (Context) -  Customized Classes for context/page/components */
+
+/* #region || Responsiveness (RWD) : Media queries */
+@media screen and (max-width: 720px) {
+  /*changes reflects on screen with a width of 720px and below*/
+  nav {
+    padding: 1.5rem 1rem;
+  }
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+  .hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero img {
+    height: 37.5rem;
+    width: 30rem;
+  }
+
+  .bio {
+    margin-top: -7rem;
+    width: 20.5rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 17.75rem;
+  }
+}
+
+/* #endregion -> Responsiveness (RWD) : Media queries */
