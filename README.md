@@ -20,4 +20,4 @@ Project 8 - JS Puzzles Brain Teaser (Rapidops)
 
 ## Serious Vanilla coding started from here !!
 
-Project 9 - UI Hub
+Project 9 - Boilerplate-Template

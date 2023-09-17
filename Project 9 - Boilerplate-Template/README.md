@@ -1,10 +1,10 @@
-# UI Hub
+# Boilerplate-Template
 
-A collection of different UI Components written purely using vanilla HTML CSS JS (No additional Libraries or frameworks). It's kind of Component generator, different pieces/units/components put together to create a website which is responsive and dynamic.
+Boilerplate-Template for html css js projects
 
 ## Demo (live) | Production
 
-- www.uihub123.vercel.com
+- www.boilerplate.vercel.com
 
 ## Features
 
