@@ -46,10 +46,10 @@ body {
 
 /* #region || Styles - Tag/Elements (General/1st level) */
 nav {
-  /* display/layout rules */
+  /* display/layout rules : box,flex,grid */
   display: flex;
 
-  /* positioning rules */
+  /* positioning rules : float,sticky etc... */
   position: sticky;
   top: 0;
   left: 0;

@@ -2,6 +2,10 @@
 
 A collection of different UI Components written purely using vanilla HTML CSS JS (No additional Libraries or frameworks). It's kind of Component generator, different pieces/units/components put together to create a website which is responsive and dynamic.
 
+## Demo (live) | Production
+
+- www.uihub123.vercel.com
+
 ## Features
 
 - Light/dark mode toggle
@@ -14,7 +18,13 @@ Project structure is simple for vanilla html css js, however if u want MVC refer
 
 # Design | Markup (Figma, PSD Links)
 
-- www.figma.com/example
+- Figma
+- PSD/AI
+- Templates/Clones of html/css OR JPG/PNG's
+
+# Output (Screenshots)
+
+- www.photos.google.com/pics
 
 # UI Components List
 
